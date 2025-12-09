@@ -1,35 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ram B — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Ram B — EEE student, Blender artist, hackathon enthusiast. Portfolio showcasing projects and contact." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <header>
-        <h1>Hi, I'm Ram B</h1>
-        <p>EEE Student | Blender Artist | Hackathon Enthusiast</p>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1><a href="/">Ram B</a></h1>
+        <p class="muted">EEE Student • Blender • Robotics • Hackathons</p>
+      </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I love making 3D content in Blender, working on electronics projects, and participating in hackathons.</p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h2 class="reveal">Hi — I'm <span class="accent">Ram</span></h2>
+        <p class="lead reveal-delay">
+          EEE student with a passion for Blender visuals, embedded systems and building simple robots that solve real problems.
+        </p>
+        <div class="hero-ctas reveal-delay-2">
+          <a href="#projects" class="btn">See Projects</a>
+          <a href="#contact" class="btn-outline">Hire / Contact</a>
+        </div>
+      </div>
+      <div class="hero-right reveal-image">
+        <!-- Replace with a crisp personal photo or a Blender render -->
+        <div class="profile-placeholder" aria-hidden="true">Your Photo</div>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Line Following Robot</li>
-            <li>Maze Solving Robot</li>
-            <li>3D Short Films in Blender</li>
-            <li>Hackathon Prototypes</li>
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h3>About</h3>
+      <div class="about-grid">
+        <p>
+          I create 3D visuals in Blender and build small electronics and robotic projects during hackathons. I care about clean design, efficient code, and shipping simple reliable solutions.
+        </p>
+        <ul class="meta-list">
+          <li><strong>Location:</strong> India</li>
+          <li><strong>Role:</strong> EEE Student</li>
+          <li><strong>Tools:</strong> Blender, Arduino, C/C++, Git</li>
         </ul>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill">
+          <h4>Embedded Systems</h4>
+          <p>Arduino, sensors, motors, PID basics</p>
+        </div>
+        <div class="skill">
+          <h4>3D / Blender</h4>
+          <p>Modeling, lighting, basic animation, rendering</p>
+        </div>
+        <div class="skill">
+          <h4>Web & Git</h4>
+          <p>HTML, CSS, GitHub Pages — basic deployment</p>
+        </div>
+        <div class="skill">
+          <h4>Tools</h4>
+          <p>VSCode, Git, Figma (basic), Blender</p>
+        </div>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h3>Selected Projects</h3>
+        <p class="muted">Short descriptions + links to demos / repo</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project card 1 -->
+        <article class="project-card">
+          <div class="project-content">
+            <h4>Line-Following Robot</h4>
+            <p>4 IR sensor robot with PID tuning — reliable at low speeds for tight turns.</p>
+            <p class="muted small">Arduino • Motors • PID</p>
+            <div class="project-links">
+              <a href="#">Repo</a>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="project-card">
+          <div class="project-content">
+            <h4>Maze Solver</h4>
+            <p>Ultrasonic sensor + servo scanning for left/front/right — flood-fill approach.</p>
+            <p class="muted small">Arduino • Servo • Ultrasonic</p>
+            <div class="project-links">
+              <a href="#">Repo</a>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 3 -->
+        <article class="project-card">
+          <div class="project-content">
+            <h4>Short Film — The Paper Plane</h4>
+            <p>1-minute dialogue-free film — Blender pipeline: modeling, lighting, render.</p>
+            <p class="muted small">Blender • Animation • Cinematic Lighting</p>
+            <div class="project-links">
+              <a href="#">Showreel</a>
+              <a href="#">Notes</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact-section">
+      <h3>Contact</h3>
+      <p class="muted">Open to internships, collaborations, and freelance design / robotics work.</p>
+
+      <div class="contact-grid">
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+        </div>
+
+        <div>
+          <h4>Resume</h4>
+          <p><a href="#" target="_blank" rel="noopener">Download PDF</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ram B — Built with care. <span class="muted">Hosted on GitHub Pages</span></p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
